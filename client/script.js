@@ -1,5 +1,5 @@
-import bot from "/Users/pathikshah/Desktop/DEV_Projects/open_ai_codex/client/assets/bot.svg";
-import user from "/Users/pathikshah/Desktop/DEV_Projects/open_ai_codex/client/assets/user.svg";
+import bot from "./assets/bot.svg";
+import user from "./assets/user.svg";
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from server -› bot's response
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://codex-bql5.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
